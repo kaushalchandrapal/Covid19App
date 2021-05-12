@@ -58,7 +58,7 @@ const Filters = ( dataList ) => {
                 </TextField>
             </Grid>
             <Grid item xs={5}>
-                    <Autocomplete
+                    {/* <Autocomplete
                         id='autoCompleteId'
                         options={data}
                         fullWidth
@@ -66,7 +66,7 @@ const Filters = ( dataList ) => {
                         margin='normal'
                         onChange={handleChange}
                         renderInput={(params) => <TextField {...params} label="State" variant="outlined"/>}
-                    />
+                    /> */}
             </Grid>
             <Grid item xs={2}>
                 <br></br>
