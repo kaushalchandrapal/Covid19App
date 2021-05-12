@@ -41,7 +41,7 @@ const TableComponent = ( prop ) => {
       },
   ];
   
-  return(<Table dataSource={data} columns={columns} key='table'/>)
+  return(<Table dataSource={data} columns={columns} rowKey={record => record.state} />)
 }
 
 export default TableComponent;

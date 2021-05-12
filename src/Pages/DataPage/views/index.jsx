@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import TableComponent from '../../../Component/TableComponent';
 import { Link } from 'react-router-dom'
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import { getData } from '../actions/index';
@@ -39,22 +38,22 @@ const DataPage = () => {
         if(data.length === 0){
             dispatch(getData());
         }
-    }, []);
+    });
 
-    let onKeyPress = (event) => {
-        return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122);
-    }
+    // let onKeyPress = (event) => {
+    //     return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122);
+    // }
     
-    const regex = /[A-Za-z]/;
+    // const regex = /[A-Za-z]/;
 
-    function validate(e) {
-        const chars = e.target.value.split('');
-        const char = chars.pop();
-        if (!regex.test(char)) {
-          e.target.value.replace(/[A-Za-z]/,'');
-          console.log(`${char} is not a valid character.`);
-        }
-    }
+    // function validate(e) {
+    //     const chars = e.target.value.split('');
+    //     const char = chars.pop();
+    //     if (!regex.test(char)) {
+    //       e.target.value.replace(/[A-Za-z]/,'');
+    //       console.log(`${char} is not a valid character.`);
+    //     }
+    // }
 
     const [age, setAge] = useState();
     

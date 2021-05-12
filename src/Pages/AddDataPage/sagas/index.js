@@ -1,5 +1,4 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { call, put, takeEvery, select } from 'redux-saga/effects';
+import { put, takeEvery, select } from 'redux-saga/effects';
 import * as constant from '../../DataPage/constants/index'
 
 

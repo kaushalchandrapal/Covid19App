@@ -1,5 +1,4 @@
-import { call, put, takeEvery, select } from 'redux-saga/effects';
-import axios from 'axios';
+import { put, takeEvery, select } from 'redux-saga/effects';
 import * as constant from '../constants/index'
 
 
@@ -9,6 +8,9 @@ function* fetchFilterData(action){
         const dataToTable = data.filter(d => {
             if(d.state===action.payload){
                 return d;
+            }
+            else{
+                return null;
             }
         });
         yield put({ type: constant.FILTER_CONDITION_SUCCESS, data: data, dataToTable: dataToTable });
