@@ -6,7 +6,6 @@ import { filterAction } from '../../actions/filterActions';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button'
 import { Typography } from '@material-ui/core';
-import Autocomplete from '@material-ui/lab/Autocomplete';
 
 
 const Filters = ( dataList ) => {
